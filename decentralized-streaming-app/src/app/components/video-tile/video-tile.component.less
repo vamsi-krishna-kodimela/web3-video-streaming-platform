@@ -1,0 +1,44 @@
+.video-tile {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s;
+  &__thumbnail {
+    aspect-ratio: 1.5;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px;
+    &-title {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #333;
+      text-align: center;
+    }
+    &-description {
+      font-size: 1rem;
+      font-weight: 400;
+      color: #666;
+      text-align: center;
+    }
+  }
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+}

@@ -1,1 +1,12 @@
-<p>video-tile works!</p>
+<div class="video-tile">
+  <img
+    class="video-tile__thumbnail"
+    [src]="video().thumbnail"
+    [alt]="video().title"
+  />
+
+  <div class="video-tile__info">
+    <div class="video-tile__info-title">{{ video().title }}</div>
+    <div class="video-tile__info-description">{{ video().description }}</div>
+  </div>
+</div>
