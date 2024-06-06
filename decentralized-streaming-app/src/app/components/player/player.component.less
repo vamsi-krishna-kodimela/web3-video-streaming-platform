@@ -11,51 +11,13 @@
   &__video {
     width: 100%;
     height: 100%;
+    aspect-ratio: 16/9;
     object-fit: contain;
     object-position: center;
-  }
-  &__controls {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    &-button {
-      padding: 0px;
-      margin: 0px;
-      border: none;
-      background-color: transparent;
-      color: #fff;
-      font-size: 20px;
-      cursor: pointer;
-    }
-    &-volume {
-      cursor: pointer;
-      color: #fff;
-      font-size: 20px;
-    }
-    &-progress {
-      flex: 1;
-      height: 5px;
-      background-color: #fff;
-      position: relative;
-      .progress-bar {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        background-color: #f00;
-      }
-    }
-    &-time {
-      padding: 0px;
-      margin: 0px;
-      color: #fff;
-      font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    &--display {
+      opacity: 1;
     }
   }
 }
