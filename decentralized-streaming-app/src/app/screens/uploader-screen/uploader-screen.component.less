@@ -1,0 +1,70 @@
+.uploader-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  &__header {
+    &-title {
+      font-size: 1.64rem;
+      margin: 0px;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+    .form-group {
+      width: 100%;
+      margin-bottom: 1rem;
+      label {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+      }
+      input {
+        width: 100%;
+        padding: 0.5rem;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 0.25rem;
+        &:focus {
+          outline: none;
+          border: 1px solid #000;
+        }
+      }
+
+      textarea {
+        width: 100%;
+        padding: 0.5rem;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 0.25rem;
+        resize: vertical;
+        &:focus {
+          outline: none;
+          border: 1px solid #000;
+        }
+      }
+      button {
+        width: 100%;
+        padding: 0.8rem 1rem;
+        font-size: 1rem;
+        border: none;
+        border-radius: 0.25rem;
+        background-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+    }
+  }
+}

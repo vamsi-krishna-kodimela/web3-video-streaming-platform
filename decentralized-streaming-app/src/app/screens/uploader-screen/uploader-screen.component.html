@@ -1,1 +1,35 @@
-<p>uploader-screen works!</p>
+<div class="uploader-screen">
+  <div class="uploader-screen__header">
+    <h2 class="uploader-screen__header-title">Upload your video</h2>
+  </div>
+
+  <form (submit)="onSubmit($event)" class="uploader-screen__form">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" id="title" name="title" [(ngModel)]="title" required />
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea
+        id="description"
+        name="description"
+        [(ngModel)]="description"
+        required
+      ></textarea>
+    </div>
+    <div class="form-group">
+      <label for="video">Video</label>
+      <input
+        type="file"
+        id="video"
+        name="video"
+        accept="video/mp4,video/x-m4v,video/*"
+        (change)="onFileChange($event)"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <button type="submit">Upload</button>
+    </div>
+  </form>
+</div>
