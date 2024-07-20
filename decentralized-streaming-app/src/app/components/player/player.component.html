@@ -1,6 +1,6 @@
-<div class="player">
+<div class="player" #videoPlayer>
   <iframe
-    src="https://player.thetavideoapi.com/video/video_pj5k22xwuktpqjpyv3rdbuximv"
+    [src]="videoSrc"
     border="0"
     width="100%"
     height="100%"
@@ -8,5 +8,6 @@
     class="player__video"
     (load)="onload()"
     [ngClass]="{ 'player__video--display': isLoadingCompleted }"
+    loading="lazy"
   ></iframe>
 </div>

@@ -1,9 +1,12 @@
-<div class="video-tile" routerLink="/player/id">
-  <img
+<div class="video-tile" (click)="navigateToPlayer(video().id)">
+  <iframe
+    [src]="sanitizeUrl(video().thumbnail)"
+    frameborder="0px"
+    width="100%"
+    height="100%"
+    allowfullscreen
     class="video-tile__thumbnail"
-    [src]="video().thumbnail"
-    [alt]="video().title"
-  />
+  ></iframe>
 
   <div class="video-tile__info">
     <div class="video-tile__info-title">{{ video().title }}</div>
